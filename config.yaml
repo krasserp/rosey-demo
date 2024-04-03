@@ -1,0 +1,13 @@
+baseURL: 'http://example.org/'
+languageCode: en-us
+title: Hugo Rosey Demo
+module:
+  replacements: local/component-library -> ../component-library
+  imports:
+    - path: local/component-library
+    - path: github.com/cloudcannon/bookshop/hugo/v3
+markup:
+  goldmark:
+    renderer:
+      hardWraps: true
+      unsafe: false

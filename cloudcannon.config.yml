@@ -1,0 +1,47 @@
+paths:
+  data: data
+  collections: content
+  includes: layouts
+  layouts: layouts
+  static: static
+  uploads: static/images
+  source: ''
+  archetypes: archetypes
+  assets: assets
+  content: content
+  pages: content
+  publish: public
+  config: ''
+collections_config:
+  pages:
+    path: content
+    output: true
+    filter: strict
+    icon: laptop_mac
+    _enabled_editors:
+      - visual
+    _editables:
+    _inputs:
+  data:
+    path: data
+    output: false
+    icon: notes
+  translations:
+    path: rosey/locales
+    output: false
+    icon: translate
+    _inputs:
+      original:
+        type: textarea
+        label: Original
+        comment: This is the original value. Enter a translation in the box marked 'Translation' below.
+      value:
+        type: textarea
+        label: Translation
+        comment: Enter a translation for the text above.
+timezone: Etc/UTC
+_inputs:
+  seo:
+    options:
+      preview:
+        icon: manage_search

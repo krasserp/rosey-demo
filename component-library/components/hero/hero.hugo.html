@@ -1,0 +1,15 @@
+{{ $c := "hero" }}
+
+<div class="{{ $c }}">
+   <div class="{{ $c }}__wrapper">
+      {{ with .heading }}
+      <h1 data-rosey="{{ . }}">{{ . }}</h1>
+      {{ end }}
+      {{ with .text }}
+         <p data-rosey="{{ . | truncate 50 }}">{{ . | markdownify }}</p>
+      {{ end }}
+      {{ with .button }}
+         {{ partial "bookshop" . }}
+      {{ end }}
+   </div>
+</div>

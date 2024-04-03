@@ -1,0 +1,20 @@
+{{ $c := "left-right" }}
+
+<div class="{{ $c }}">
+   <div class="{{ $c }}__wrapper">
+      <div class="{{ $c }}__text">
+         {{ with .heading }}
+            <h2 data-rosey="{{ . }}">{{ . }}</h2>
+         {{ end }}
+         {{ with .text }}
+            <p data-rosey="{{ . | truncate 50}}">{{ . }}</p>
+         {{ end }}
+         {{ with .button }}
+            {{ partial "bookshop" . }}
+         {{ end }}
+      </div>
+      {{ if .image }}
+         <img class="{{ $c }}__img" src={{ .image }} alt={{ .image_alt }} />
+      {{ end }}
+   </div>
+</div>

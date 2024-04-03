@@ -1,0 +1,28 @@
+{
+  "ssg": "hugo",
+  "build_configuration": {
+    "install_command": "[ -f package.json ] && npm i",
+    "destination": "public",
+    "baseURL": "/",
+    "preserved_paths": "node_modules/,.hugo_cache/,resources/",
+    "includeGit": true,
+    "environment_variables": [
+      {
+        "key": "HUGO_CACHEDIR",
+        "value": "/usr/local/__site/src/.hugo_cache/"
+      },
+      {
+        "key": "SYNC_PATHS",
+        "value": "/rosey/"
+      },
+      {
+        "key": "TRANSLATE",
+        "value": "false"
+      },
+      {
+        "key": "LOCALES",
+        "value": "fr-fr,de-de,es-es"
+      }
+    ]
+  }
+}
